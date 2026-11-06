@@ -30,8 +30,8 @@ while IFS= read -r sample_ID || [ -n "$sample_ID" ]; do
     # 1. Trim and quality filter NGS reads
     trim_galore --paired \
         --cores "${THREADS}" \
-        "/Volumes/SF_Personal/SHIROKANE/Fujita_Civet cell RNAseq/2025.10.16_CQ627_RNA-seq_6G_24sample/BMK250729-CQ627-ZX01-0101/BMK_DATA_20250926152634_1/Data/rawdata/${sample_ID}_1.fq.gz" \
-        "/Volumes/SF_Personal/SHIROKANE/Fujita_Civet cell RNAseq/2025.10.16_CQ627_RNA-seq_6G_24sample/BMK250729-CQ627-ZX01-0101/BMK_DATA_20250926152634_1/Data/rawdata/${sample_ID}_2.fq.gz" \
+        "/Fujita_Civet cell RNAseq/2025.10.16_CQ627_RNA-seq_6G_24sample/BMK250729-CQ627-ZX01-0101/BMK_DATA_20250926152634_1/Data/rawdata/${sample_ID}_1.fq.gz" \
+        "/Fujita_Civet cell RNAseq/2025.10.16_CQ627_RNA-seq_6G_24sample/BMK250729-CQ627-ZX01-0101/BMK_DATA_20250926152634_1/Data/rawdata/${sample_ID}_2.fq.gz" \
         --output_dir cleaned_reads
 
     # 2 & 3. Mapping, Sorting, and Direct BAM output
